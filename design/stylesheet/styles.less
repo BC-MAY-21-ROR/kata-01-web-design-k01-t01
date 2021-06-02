@@ -1,41 +1,200 @@
+@colorAzul: hsl(193, 100%, 96%);
+@colorRosa: hsl(322, 100%, 66%);
+@colorCyanDark: hsl(192, 100%, 9%);
+@colorCyanPale: hsl(193, 100%, 96%);
+
+.image{
+    width: 20%;
+}
+
+.titleImage{
+    width: 60%
+}
 
 .container{
     display: flex;
     flex-direction: column;
 }
 
+body{
+    margin: 0;
+}
 .sectionTop{
     display:flex;
     flex-flow: row;
-    
-}
-
-.sectionBottom{
-    display: flex;
-    flex-direction: row;
-    
+    background-image: url("../../images/bg-hero-mobile.svg");
+    background-color: @colorAzul;
+    padding: 2vh 2vw 2vh 2vw;
 }
 
 .itemTop{
-    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .itemTopB{
+    display: flex;
+    flex-direction: row;
+}
+.sectionBottom{
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+.tryButton{
+    background-color: white;
+    margin: 4vw 3vh 3vw 3vh;    
+    padding: 0vh 4vw 0vh 4vw;
+    box-shadow: 0 1px 1px 3px hsl(193, 21%, 92%);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pinkButton{
+    background: @colorRosa;
+    border-radius: 20px;
+    color: hsl(300, 24%, 96%);
+    padding: 10px;
+    margin: 4vw 3vh 3vw 3vh;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: @colorCyanDark;
+}
+
+.cardBottom{
+    margin: 4vw 3vh 3vw 3vh;    
+    padding: 2vh 2vw 2vh 2vw;
+    box-shadow: 0 0 7px 7px hsl(193, 21%, 92%);
+    border-radius: 5px;
+}
+
+.smallBottom{
+    background-color: white;
+    position: relative;
+    margin: 0vw 5vh 0vw 5vh;    
+    padding: 2vh 2vw 2vh 2vw;
+    box-shadow: 0 0 7px 7px hsl(193, 21%, 92%);
+    border-radius: 5px;
+    transform: translateY(35%)
     
 }
 
-.itemBottom{
-    
+
+footer{
+    background-color:  hsl(192, 100%, 9%);
+    color: white;
+    padding-top: 100px;
 }
 
+.main-footer{ 
+    display: flex;
+    flex-direction: row;
+}
 
-@media screen and (max-width: 700px){
+.row-footerT{
+    display: flex;
+    flex-direction: row;
+}
+.row-footerTJ{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.row-footerB{
+    display: flex;
+    flex-direction: row;
+}
+
+.text-footer{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;    
+    color: white;
+}
+
+.icon-footer{
+    display:block;
+    margin:auto;
+    align-self: flex-start;    
+}
+
+@media screen and (max-width: 500px){
     .sectionTop{
+        flex-direction: column;
+        
+    }
+    .sectionBottom{
+        flex-direction: column;
+    }
+    .itemTopB{
         flex-direction: column;
     }
 
-    .image {    
-        width: 6vh;
+    .cardBottom{
+        margin: 4vw 3vh 3vw 3vh;
     }
 
+    .image {    
+        width: 50%;
+        display: block;
+        margin:auto;
+    }  
+    h1{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        text-align: center;
+    }
+    p{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    } 
+    .pinkButton{
+        justify-content: center;
+        margin: 0vw 10vh 3vw 10vh;
+    }
+    .main-footer{
+        flex-direction: column;
+        padding: 2vh 2vw 2vh 2vw;
+    }
+    .row-footerT{
+        flex-direction: column;
+    }
+    
+    .row-footerB{
+        flex-direction: column;
+    }
+    .row-footerTJ{
+        flex-direction: row;
+        justify-items: right;
+    }
+    .icon-footer{
+        margin:auto;
+        align-self: flex-start;    
+    }
+    .text-footer{
+        text-align: left;
+    }
+    .smallBottom{
+        margin: 4vw 3vh 3vw 3vh;    
+        padding: 0vh 4vw 0vh 4vw;
+    }
 }
