@@ -4,11 +4,11 @@
 @colorCyanPale: hsl(193, 100%, 96%);
 
 .image{
-    width: 20%;
+    width: 35vw;    
 }
 
 .titleImage{
-    width: 60%
+    width: 60%;    
 }
 
 .container{
@@ -24,23 +24,54 @@ body{
     flex-flow: row;
     background-image: url("../../images/bg-hero-mobile.svg");
     background-color: @colorAzul;
-    padding: 2vh 2vw 2vh 2vw;
+    padding: 0vh 2vw 10vh 2vw;
 }
 
 .itemTop{
+    background-color: @colorAzul;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 5vh 2vw 4vh 2vw;
 }
 
 .itemTopB{
     display: flex;
     flex-direction: row;
+    margin: 2vh 10vw 0vh 3vw;
 }
 .sectionBottom{
     display: flex;
     flex-direction: column;
+    padding: 2vh 2vw 2vh 2vw;    
+}
+
+.cardBottom{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 4vw 8vh 3vw 8vh;    
     padding: 2vh 2vw 2vh 2vw;
+    box-shadow: 0 0 7px 7px hsl(193, 21%, 92%);
+    border-radius: 15px;
+}
+
+.itemCard{
+    margin: 2vh 10vw 0vh 3vw;
+    padding: 6vh 1vw 1vh 1vw;
+}
+
+.cardBottomD{
+    display: flex;
+    flex-direction: row;
+    margin: 4vw 8vh 3vw 8vh;    
+    padding: 2vh 2vw 2vh 2vw;
+    box-shadow: 0 0 7px 7px hsl(193, 21%, 92%);
+    border-radius: 15px;
+}
+
+.itemCardD{
+    margin: 2vh 3vw 0vh 10vw;
+    padding: 6vh 1vw 1vh 1vw;
 }
 
 .tryButton{
@@ -64,8 +95,11 @@ body{
 
 h1{
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    text-align: center;
+    font-weight: 700;
+    text-align: left;
+}
+.titleTop{
+    font-size: 44px;
 }
 h3{
     font-family: 'Open Sans', sans-serif;
@@ -73,17 +107,11 @@ h3{
     text-align: center;
 }
 p{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-size: 20px;
     color: @colorCyanDark;
-}
-
-.cardBottom{
-    margin: 4vw 3vh 3vw 3vh;    
-    padding: 2vh 2vw 2vh 2vw;
-    box-shadow: 0 0 7px 7px hsl(193, 21%, 92%);
-    border-radius: 5px;
 }
 
 .smallBottom{
@@ -92,11 +120,9 @@ p{
     margin: 0vw 5vh 0vw 5vh;    
     padding: 2vh 2vw 2vh 2vw;
     box-shadow: 0 0 7px 7px hsl(193, 21%, 92%);
-    border-radius: 5px;
+    border-radius: 8px;
     transform: translateY(35%)
-    
 }
-
 
 footer{
     background-color:  hsl(192, 100%, 9%);
@@ -111,30 +137,57 @@ footer{
 
 .row-footerT{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 0vh 0vw 0vh 4vw;
 }
 .row-footerTJ{
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
+
+    align-items: baseline;
 }
 
 .row-footerB{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
 }
 
 .text-footer{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;    
     color: white;
+    padding: 1vh 10vw 0vh 0vw;
+}
+.text-footerT{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;    
+    color: white;
+    padding: 0vh 16vw 0vh 0vw;
 }
 
 .icon-footer{
     display:block;
     margin:auto;
-    align-self: flex-start;    
+    align-self: flex-start;
+    padding: 0vh 2vw 0vh 4vw;    
 }
+
+.icon-social{
+    width: 20px;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+.center-item{
+    display: flex;
+    flex-direction: row;   
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+.center-itemB{
+    text-align: right;
+    padding: 1vh 1vw 3vh 1vw;
+}
+
 
 @media screen and (max-width: 500px){
     .sectionTop{
@@ -150,6 +203,20 @@ footer{
 
     .cardBottom{
         margin: 4vw 3vh 3vw 3vh;
+        flex-direction: column;
+    }
+
+    .itemCard{
+        margin: 0;
+    }
+
+    .cardBottomD{
+        margin: 4vw 3vh 3vw 3vh;
+        flex-direction: column;
+    }
+
+    .itemCardD{
+        margin: 0;
     }
 
     .image {    
@@ -161,11 +228,16 @@ footer{
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
         text-align: center;
+        font-size: 24px;
+    }
+    .titleTop{
+        font-size: 34px;
     }
     p{
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         text-align: center;
+        font-size: 16px;
     } 
     .pinkButton{
         justify-content: center;
@@ -181,20 +253,37 @@ footer{
     
     .row-footerB{
         flex-direction: column;
+        margin: 4vw 3vh 3vw 5vh;
     }
     .row-footerTJ{
         flex-direction: row;
         justify-items: right;
+        align-items: baseline;
     }
     .icon-footer{
         margin:auto;
-        align-self: flex-start;    
+        align-self: flex-start;
+        margin: 3vw 3vh 0vw 3vh;    
     }
     .text-footer{
         text-align: left;
+        margin: 4vw 3vh 3vw 3vh;
+
+    }
+    .text-footerT{
+        text-align: left;
+        margin: 0vw 3vh 1vw 1vh;
     }
     .smallBottom{
         margin: 4vw 3vh 3vw 3vh;    
         padding: 0vh 4vw 0vh 4vw;
+    }
+    .center-item{
+        text-align: center;
+        justify-content: center;
+        padding: 1vh 1vw 2vh 1vw;
+    }
+    .center-itemB{
+        text-align: center;
     }
 }
